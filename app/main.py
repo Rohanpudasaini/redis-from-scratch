@@ -11,6 +11,7 @@ def main():
     connection, _ = server_socket.accept()  # wait for client
     while True:
         msg, *_ = connection.recvmsg(8)
+        print(msg)
         if msg:
             connection.send(b"+PONG\r\n")
 

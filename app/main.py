@@ -10,7 +10,7 @@ def main():
     server_socket = socket.create_server(("localhost", 6379), reuse_port=True)
     connection, _ = server_socket.accept()  # wait for client
     while True:
-        msg, _ = connection.recvmsg(8)
+        msg, _, _, _, _ = connection.recvmsg(8)
         if msg:
             connection.send(b"+PONG\r\n")
 

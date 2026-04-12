@@ -8,8 +8,8 @@ def main():
     # Uncomment the code below to pass the first stage
     #
     server_socket = socket.create_server(("localhost", 6379), reuse_port=True)
-    simple_socket = server_socket.accept()  # wait for client
-    simple_socket[0].send(b"+PONG\r\n")
+    connection, _ = server_socket.accept()  # wait for client
+    connection.send(b"+PONG\r\n")
 
 
 if __name__ == "__main__":

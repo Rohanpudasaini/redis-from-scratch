@@ -89,7 +89,7 @@ async def main(reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
 
 
 async def run_server():
-    server = await asyncio.start_server(main, "localhost", 6378)
+    server = await asyncio.start_server(main, "localhost", 6379)
     await server.serve_forever()
 
 

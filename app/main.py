@@ -53,12 +53,6 @@ class RESP_Parser:
         return elements
 
 
-# *2\r\n$4\r\nECHO\r\n$3\r\nhey\r\n
-# *3\r\n$4\r\nECHO\r\n$3\r\nhey\r\n$5\r\nWorld\r\n
-# async def parse_RESP_Array(msg: bytes):
-#     print(msg.decode("utf-8"))
-
-
 async def main(reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
     # You can use print statements as follows for debugging, they'll be visible when running tests.
     print("Logs from your program will appear here!")
